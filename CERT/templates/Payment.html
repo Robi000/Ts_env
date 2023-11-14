@@ -101,44 +101,4 @@
         <button type="submit">Submit</button>
     </form>
 </div>
-<!-- your_template.htmlji -->
-{% comment %} <form method="post" action="">
-    {% csrf_token %}
-    <table>
-        <thead>
-            <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Batch</th>
-                <th>Payment Status</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for student in students %}
-            <tr>
-                <td>{{ student.first_name }}</td>
-                <td>{{ student.last_name }}</td>
-                <td>{{ student.Batch }}</td>
-                <td>
-                    <select name="payment_status_{{ student.id }}" class="form-control">
-                        {% for value, label in form.payment_status.field.choices %}
-                        <option value="{{ value }}" {% if student.payment_status == value %}selected{% endif %}>
-                            {{ label }}</option>
-                        {% endfor %}
-                    </select>
-
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-    <button type="submit" class="btn btn-primary">Update Payment Status</button>
-</form>
-
-
-{% for value, label in form.payment_status.choices %}
-<h1>{{ label }}xxx</h1>
-{% endfor %}
-</div> {% endcomment %}
-
 {% endblock content %}
