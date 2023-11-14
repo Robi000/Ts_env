@@ -1,0 +1,35 @@
+import pandas as pd
+from datetime import datetime
+from your_app.models import Batch  # Replace 'your_app' with the actual name of your Django app
+
+# Replace 'your_file.csv' with the actual path to your CSV file
+csv_file_path = 'your_file.csv'
+
+# Read the CSV file into a Pandas DataFrame
+df = pd.read_csv(csv_file_path)
+
+# Iterate over each row in the DataFrame
+for index, row in df.iterrows():
+    # Parse the date string and convert it to datetime
+    date_str = row['Timestamp']
+    formatted_date = datetime.strptime(date_str, '%d/%m/%Y %H:%M:%S')
+
+    # Map DataFrame columns to Batch model fields
+    batch_data = {
+        'registration': formatted_date,
+        'email': row['Email Address'],
+        'phone': int(row['Ph_NO']),
+        'age': int(row['Age']),
+        'edu_lev': row['Education Level'],
+        'org':row['Applicant Organization '],
+        'occ': row['Current Occupation '],
+        'cource': row['cources'],
+        'cert_type': row['Type of certification '],
+        'photo_url': row['photo'],
+    }
+
+    # Create a Batch instance with the mapped data
+    student = Student.objects.create(**batch_data)
+
+    # Print the created Batch instance (optional)
+    print(f"Student {student.id} created with data: {batch_data}")

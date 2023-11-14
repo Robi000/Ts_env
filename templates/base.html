@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Login V3</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="images/icons/favicon.ico" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css' %}" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/iconic/css/material-design-iconic-font.min.css' %}" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css' %}" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/animsition/css/animsition.min.css' %}" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css' %}" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'vendor/daterangepicker/daterangepicker.css' %}" />
+    <!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{% static 'css/util.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
+    <script src="{% static 'js/htmxx.js' %}"></script>
+    <style>
+        <style>
+
+        /* Add CSS for styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #ffffff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo img {
+            max-height: 50px;
+            transition: transform 0.3s;
+        }
+
+        .header {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333333;
+        }
+
+        .logo:hover img {
+            transform: rotate(360deg);
+        }
+
+        /* Responsive Styles */
+        @media screen and (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .logo,
+            .header {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href="#"><img src="{% static 'a.jpeg' %}" alt="Logo" /></a>
+        </div>
+        <div class="header">Student Certification Verification Site</div>
+    </div>
+    <div class="container mt-3">
+
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+
+
+
+    <div id="dropDownSelect1"></div>
+
+    <!--===============================================================================================-->
+    <script src="{% static 'vendor/jquery/jquery-3.2.1.min.js' %}"></script>
+    <!--===============================================================================================-->
+    <script src="{% static 'vendor/animsition/js/animsition.min.js' %}"></script>
+    <!--===============================================================================================-->
+    <script src="{% static 'vendor/bootstrap/js/popper.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+    <!--===============================================================================================-->
+    <script src="{% static 'vendor/select2/select2.min.js' %}"></script>
+    <!--===============================================================================================-->
+    <script src="{% static 'vendor/daterangepicker/moment.min.js' %}"></script>
+    <script src="{% static 'vendor/daterangepicker/daterangepicker.js' %}"></script>
+    <!--===============================================================================================-->
+    <script src="{% static 'vendor/countdowntime/countdowntime.js' %}"></script>
+    <!--===============================================================================================-->
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+
+</html>
