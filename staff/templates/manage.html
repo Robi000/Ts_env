@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- your_template.html -->
+<style>
+    /* Custom CSS for a green theme */
+    body {
+        background-color: #e2f1e9;
+        /* Light green background */
+        padding: 20px;
+    }
+
+    .card {
+        background-color: #ffffff;
+    }
+
+    .card-header {
+        background-color: #28a745;
+        color: #ffffff;
+    }
+
+    .btn-primary {
+        background-color: #28a745;
+        border-color: #28a745;
+    }
+
+    .btn-primary:hover {
+        background-color: #218838;
+        border-color: #1e7e34;
+    }
+
+    .form-group input {
+        transition: all 0.3s ease-in-out;
+    }
+
+    .form-group input:focus {
+        box-shadow: 0 0 10px rgba(0, 128, 0, 0.5);
+    }
+
+    .fa-user,
+    .fa-lock {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #28a745;
+    }
+
+    .fa-user {
+        left: 10px;
+    }
+
+    .fa-lock {
+        left: 12px;
+    }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h4>Manage Staff</h4>
+            </div>
+            <div class="card-body">
+                <table class="table table-striped table-bordered table-sm mt-3">
+                    <thead>
+                        <tr>
+                            <th>User Name</th>
+                            <th>Full Name</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        {% for user in userss %}
+                        <tr>
+                            <td>{{user.user.username}}</td>
+                            <td>{{user.first_name}} {{user.Last_name}}</td>
+                            <td><button class="btn btn-warning"><i class="fas fa-edit"></i></button></td>
+                            <td>
+                                <button hx-delete="{% url 'delete_user' id=user.user.id %}" hx-target="body" hx-confirm="Are you sure you wish to delete {{ user.first_name }}
+                                    {{ user.last_name }}'s account?">
+                                    <i class="fas fa-trash-alt"></i>
+                                </button>
+
+
+                                {% comment %} <button hx-get="{% url 'delete_user' id=user.user.id %}"
+                                    class="btn btn-danger"><i class="fas fa-trash-alt"></button> {% endcomment %}
+                                <div id="target{{user.id}}" hx-swap="outerHTML">
+                                    <div class="htmx-indicator">Loading....</div>
+                                </div>
+                            </td>
+                        </tr>
+                        {% endfor %}
+
+
+                        <!-- Add more rows as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
