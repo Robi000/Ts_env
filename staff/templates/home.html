@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+{% if user.is_authenticated %}
+<!-- Navigation for Logged In Users -->
+<br><br>
+<h5>Student Management:</h5><br>
+<div class="row">
+    <div class="col-md-4 my-1">
+        <a href="{% url 'manage_user' %}" class="btn btn-primary btn-block">
+            <i class="fas fa-users"></i> User Management
+        </a>
+    </div>
+    <div class="col-md-4 my-1">
+        <a href="{% url 'user_register' %}" class="btn btn-success btn-block">
+            <i class="fas fa-user-plus"></i> User Registration
+        </a>
+    </div>
+    <div class="col-md-4 my-1">
+        <button hx-confirm="Are you sure you want to Log out?" hx-get="{% url 'logout' %}" hx-target="body"
+            class="btn btn-danger btn-block">
+            <i class="fas fa-sign-out-alt"></i> Logout
+        </button>
+    </div>
+</div>
+
+<!-- Other Sections for Logged In Users -->
+<hr>
+<br><br>
+<h5>Student Management:</h5><br>
+<div class="row">
+    <div class="col-md-4 my-1">
+        <a href="{% url 'payment' %}" class="btn btn-info btn-block">
+            <i class="fas fa-dollar-sign"></i> Student Payment System
+        </a>
+    </div>
+    <div class="col-md-4 my-1">
+        <a href="" class="btn btn-warning btn-block">
+            <i class="fas fa-money-check"></i> Student Refunding System
+        </a>
+    </div>
+    <div class="col-md-4 my-1">
+        <a href="" class="btn btn-danger btn-block">
+            <i class="fas fa-exclamation-triangle"></i> Unpaid Students
+        </a>
+    </div>
+</div>
+
+<hr>
+<br><br>
+<h5>Student Information:</h5><br>
+<div class="row">
+    <div class="col-md-3 my-1">
+        <a href="#" class="btn btn-primary btn-block">
+            <i class="fas fa-user-plus"></i> Student Detail
+        </a>
+    </div>
+    <div class="col-md-3 my-1">
+        <a href="#" class="btn btn-success btn-block">
+            <i class="fas fa-user-plus"></i> Student Registration
+        </a>
+    </div>
+    <div class="col-md-3 my-1">
+        <a href="{% url 'student_status' %}" class="btn btn-info btn-block">
+            <i class="fas fa-graduation-cap"></i> Student Academic Status
+        </a>
+    </div>
+    <div class="col-md-3 my-1 ">
+        <a href="#" class="btn btn-warning btn-block">
+            <i class="fas fa-times"></i> Unfinished Students
+        </a>
+    </div>
+</div>
+
+<hr>
+<br><br>
+<h5>Student Reports:</h5><br>
+<div class="row">
+    <div class="col-md-4 my-1">
+        <a href="#" class="btn btn-info btn-block">
+            <i class="fas fa-file"></i> Students Report Generator
+        </a>
+    </div>
+    <div class="col-md-4 my-1">
+        <a href="#" class="btn btn-success btn-block">
+            <i class="fas fa-file-alt"></i> Single Student Report Generator
+        </a>
+    </div>
+    <div class="col-md-4 my-1">
+        <a href="#" class="btn btn-primary btn-block">
+            <i class="fas fa-edit"></i> Edit Student Profile
+        </a>
+    </div>
+</div>
+
+{% else %}
+<!-- Navigation for Users Not Logged In -->
+<div class="row">
+    <div class="col-md-6">
+        <a href="{% url 'login' %}" class="btn btn-primary btn-block">
+            <i class="fas fa-sign-in-alt"></i> Log In
+        </a>
+    </div>
+    <div class="col-md-6">
+        <a href="#" class="btn btn-success btn-block">
+            <i class="fas fa-user-plus"></i> User Registration
+        </a>
+    </div>
+</div>
+
+{% endif %}
+{% endblock content %}

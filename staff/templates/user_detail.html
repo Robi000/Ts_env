@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- your_template.html -->
+<style>
+    /* Custom CSS for a green theme */
+    body {
+        background-color: #e2f1e9;
+        /* Light green background */
+        padding: 20px;
+    }
+
+    .card {
+        background-color: #ffffff;
+    }
+
+    .card-header {
+        background-color: #28a745;
+        color: #ffffff;
+    }
+
+    .btn-primary {
+        background-color: #28a745;
+        border-color: #28a745;
+    }
+
+    .btn-primary:hover {
+        background-color: #218838;
+        border-color: #1e7e34;
+    }
+
+    .form-group input {
+        transition: all 0.3s ease-in-out;
+    }
+
+    .form-group input:focus {
+        box-shadow: 0 0 10px rgba(0, 128, 0, 0.5);
+    }
+
+    .fa-user,
+    .fa-lock {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #28a745;
+    }
+
+    .fa-user {
+        left: 10px;
+    }
+
+    .fa-lock {
+        left: 12px;
+    }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h4>User details</h4>
+            </div>
+            <div class="card-body">
+
+                {% if message %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <i class="fas fa-check-circle mr-2"></i>
+                    <p>{{message|safe}}</p>
+                    <br>
+                    <dir class="border">
+                        <p><strong>username</strong>: {{username}}</p>
+                        <p><strong>Password</strong>: {{password}}</p>
+                    </dir>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                {% endif %}
+
+                <div class="">
+                    <h3>First name:</h3>
+                    <h5>{{user.first_name}}</h5>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <h3>Last name:</h3>
+                    <h5>{{user.Last_name}}</h5>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <h3>Email:</h3>
+                    <h5>{{user.email}}</h5>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <h3>Phone:</h3>
+                    <h5>{{user.phone}}</h5>
+                </div>
+                <br>
+                <br>
+                <div>
+                    <h3>Role:</h3>
+                    <h5>{{user.role}}</h5>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
