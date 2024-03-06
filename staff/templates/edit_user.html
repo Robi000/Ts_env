@@ -93,9 +93,12 @@
 
                         <select name="role" id="role" class="form-control">
                             <option value="Admin" {% if user.role == "Admin" %} selected {% endif %}>Admin</option>
+                            <option value="Sub-Admin" {% if user.role == "Sub-Admin" %} selected {% endif %} >sub-Admin</option>
                             <option value="Finance" {% if user.role == "Finance" %} selected {% endif %}>Finance
                             </option>
                             <option value="Teacher" {% if user.role == "Teacher" %} selected {% endif %}>Teacher
+                            </option>
+                            <option value="Registeral" {% if user.role == "Registeral" %} selected {% endif %}>Registeral
                             </option>
                         </select>
 

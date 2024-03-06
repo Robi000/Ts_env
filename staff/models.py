@@ -16,8 +16,10 @@ class users(models.Model):
     email = models.CharField(max_length=50)
     phone = models.CharField(max_length=50)
     role = models.CharField(max_length=50)
-    password = models.CharField(max_length=50)
-    user = models.OneToOneField(User, on_delete=models.CASCADE, blank=True, null=True)
+    dept = models.PositiveIntegerField(default=0)
+    password = models.CharField(max_length=50, null=True, blank=True)
+    user = models.OneToOneField(
+        User, on_delete=models.CASCADE, blank=True, null=True)
 
     def __str__(self):
         return self.first_name
@@ -28,7 +30,7 @@ def create_user_profile(sender, instance, created, **kwargs):
     if created:
         username = (
             instance.first_name
-            + f"_{ instance.role}_"
+            + f"_{instance.role}_"
             + str(users.objects.all().count())
         )
         password = instance.password

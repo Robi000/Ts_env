@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    /* Custom CSS for a green theme */
+    body {
+        background-color: #e2f1e9;
+        /* Light green background */
+        padding: 20px;
+    }
+
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #d1f0cd;
+        /* Light green form background */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #resultDiv {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #d1f0cd;
+        /* Light green form background */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+        color: #1e7e34;
+        /* Dark green text color */
+    }
+
+    table {
+        width: 100%;
+        margin-bottom: 20px;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        border: 1px solid #6da06d;
+        /* Dark green border */
+        padding: 8px;
+        text-align: left;
+    }
+
+    button {
+        background-color: #1e7e34;
+        /* Dark green button background */
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #155724;
+        /* Darker green on hover */
+    }
+
+    .money-box {
+        background-color: #f0f0f0;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .money-icon {
+        color: #007bff;
+    }
+
+    h2 {
+        color: #007bff;
+        margin-top: 10px;
+        font-size: 36px;
+    }
+
+    p {
+        color: #555;
+        margin-top: 5px;
+        font-size: 18px;
+    }
+</style>
+
+<div class="container">
+    <div class="money-box">
+        <i class="fas fa-money-bill-wave fa-3x money-icon"></i>
+        <h2>{{head.dept}} Birr</h2>
+        <p>Amount to be cleared</p>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Name :</h5>
+                    <p class="card-text"> {{head.first_name}} {{head.Last_name}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <form class="my-3" action="" method="POST">
+
+        {% csrf_token %}
+        <button type="submit" class="btn btn-primary mr-2"><i class="fas fa-check-circle mr-1"></i>Clear</button>
+        <a href="#" class="btn btn-danger"><i class="fas fa-trash-alt mr-1"></i>Cancle</a>
+    </form>
+
+
+
+
+
+
+    <script>
+        const acceptButton = document.querySelector('.btn-primary'); // Target the Accept button
+
+        acceptButton.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent immediate form submission
+
+            const confirmation = confirm(
+                'Are you sure you want to Clear {{head.first_name}} {{head.Last_name}}? This action cannot be undone.'
+            );
+
+            if (confirmation) {
+                // Submit the form only if the user confirms
+                this.form.submit(); // Use `this.form` to access the form associated with the button
+            }
+        });
+    </script>
+
+
+</div>
+
+
+
+{% endblock content %}

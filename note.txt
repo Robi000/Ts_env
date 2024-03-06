@@ -33,3 +33,92 @@ for index, row in df.iterrows():
 
     # Print the created Batch instance (optional)
     print(f"Student {student.id} created with data: {batch_data}")
+
+
+
+
+    -----------------------------------------------------------------------------------------------------------
+    -----------------------------------------------------------------------------------------------------------
+    -----------------------------------------------------------------------------------------------------------
+    -----------------------------------------------------------------------------------------------------------
+    -----------------------------------------------------------------------------------------------------------
+    -----------------------------------------------------------------------------------------------------------
+    -----------------------------------------------------------------------------------------------------------
+
+    -----------------------------------------------------------------------------------------------------------
+from django.shortcuts import get_object_or_404
+from .models import Student  # Import your Student model
+
+def generate_certificates(request):
+    # Get all students from the database
+    students = Student.objects.all()
+
+    # Create a response object with PDF MIME type
+    response = HttpResponse(content_type='application/pdf')
+
+    # Set the Content-Disposition header to force download
+    response['Content-Disposition'] = 'attachment; filename="certificates.pdf"'
+
+    # Create a canvas for PDF generation
+    p = canvas.Canvas(response, pagesize=letter)
+
+    # Loop through each student and generate a certificate
+    for student in students:
+        # Load the background image
+        background_image_url = 'https://example.com/a.png'  # Replace with your actual image URL
+        background_image = ImageReader(requests.get(background_image_url, stream=True).content)
+
+        # Draw the background image
+        p.drawImage(background_image, 0, 0, width=letter[1], height=letter[0])
+
+        # Draw the user photo
+        user_photo = ImageReader(requests.get(student.photo_url, stream=True).content)
+        p.drawImage(user_photo, 41, 25, width=79-41, height=0, preserveAspectRatio=True)
+
+        # Draw the logos
+        logo_width = 50  # Adjust the width as needed
+        logo_height = 50  # Adjust the height as needed
+
+        p.drawImage(student.logo1_url, 150, 10, width=logo_width, height=logo_height)
+        p.drawImage(student.logo2_url, 210, 10, width=logo_width, height=logo_height)
+        p.drawImage(student.logo1_url, 150, 40, width=logo_width, height=logo_height)
+        p.drawImage(student.logo2_url, 250, 40, width=logo_width, height=logo_height)
+
+        # Add the name
+        p.setFont("Helvetica", 49.8)
+        p.drawRightString(226, 110, student.name)
+
+        # Add the paragraph
+        paragraph_text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur vel nisi ut ipsum volutpat ullamcorper."
+        p.setFont("Helvetica", 12)
+        p.drawString(51, 120, paragraph_text)
+
+        # Add three dashes for issue date, expire date, and signature
+        p.drawString(160, 51, "---")
+        p.drawString(160, 71, "---")
+        p.drawString(160, 91, "---")
+
+        # Add a square QR code
+        qr = qrcode.QRCode(
+            version=1,
+            error_correction=qrcode.constants.ERROR_CORRECT_L,
+            box_size=10,
+            border=4,
+        )
+        qr.add_data("https://example.com")  # Replace with your actual URL
+        qr.make(fit=True)
+
+        qr_img = qr.make_image(fill_color="black", back_color="white")
+        p.drawImage(ImageReader(qr_img.make_image(fill_color="black", back_color="white").make_image()),
+                    240, 140, width=48, height=48)
+
+        # Save the PDF to the response
+        p.showPage()
+
+    p.save()
+
+    return response
+
+
+https://drive.google.com/open?id=1jhoVZfSW4qhOth8-rX7EY2jPaiGROZ6H
+<img src="https://drive.google.com/uc?export=view&id=[image_id]">

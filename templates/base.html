@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Login V3</title>
+    <title>Sami Safty</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!--===============================================================================================-->
@@ -64,6 +64,10 @@
             transform: rotate(360deg);
         }
 
+        .shiftx {
+            transform: translatex(100px)
+        }
+
         /* Responsive Styles */
         @media screen and (max-width: 768px) {
             .navbar {
@@ -84,6 +88,51 @@
         <div class="logo">
             <a href="#"><img src="{% static 'a.jpeg' %}" alt="Logo" /></a>
         </div>
+        <!-- Bootstrap Home Button with Font Awesome -->
+        <a href="{% url 'auth_home' %}" class="btn btn-light">
+            <i class="fas fa-home"></i> Home
+        </a>
+        {% if user.is_authenticated %}
+        <div class="shiftx"> Hello 👋 {{user.users.first_name}}</div>
+        {% endif %}
+
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Financial services
+            </a>
+
+            {% if role %}
+
+
+
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="{% url 'spd_req' %}">Spending Request</a>
+                <a class="dropdown-item" href="{% url 'spd_self' %}">My active spendings </a>
+                <div class="dropdown-divider"></div>
+
+                {% if depat or Admin %}
+                <a class="dropdown-item" href="{% url 'spend_list' %}">spending list</a>
+                <div class="dropdown-divider"></div>
+                {% endif %}
+
+
+                {% if Finance or Admin %}
+                <a class="dropdown-item" href="#"> Spending Detail View</a>
+                <a class="dropdown-item" href="{% url 'f_report' %}">Financial report</a>
+                <a class="dropdown-item" href="{% url 'finance_clearance' %}">Financial clerance</a>
+                {% endif %}
+
+
+                {% if Admin %}
+                <a class="dropdown-item" href="{% url 'dept_emp' %}">Emp debt list</a>
+                {% endif %}
+
+
+                <div class="dropdown-divider"></div>
+            </div>
+            {% endif %}
+        </li>
         <div class="header">Student Certification Verification Site</div>
     </div>
     <div class="container-fluid mt-3">

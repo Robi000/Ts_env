@@ -1,0 +1,150 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    body {
+        background-color: #e2f1e9;
+        /* Light green background */
+        padding: 20px;
+    }
+
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #d1f0cd;
+        /* Light green form background */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .detail {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #d1f0cd;
+        /* Light green form background */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+        color: #1e7e34;
+        /* Dark green text color */
+    }
+
+    table {
+        width: 100%;
+        margin-bottom: 20px;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        border: 1px solid #6da06d;
+        /* Dark green border */
+        padding: 8px;
+        text-align: left;
+    }
+
+    button {
+        background-color: #1e7e34;
+        /* Dark green button background */
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #155724;
+        /* Darker green on hover */
+    }
+</style>
+
+<div class="detail">
+    <form method="post" action="">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="first_name">First name:</label>
+
+            <input type="text" class="form-control" id="first_name" name="first_name" value="{{stu.first_name}}"
+                placeholder="first_name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="last_name">Last name:</label>
+            <input type="text" class="form-control" id="last_name" name="last_name" value='{{stu.last_name}}'
+                placeholder="Last_name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email:</label>
+
+            <input type="text" class="form-control" id="email" name="email" value='{{stu.email}}' placeholder="email"
+                required>
+        </div>
+
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="number" class="form-control" id="phone" name="phone" value='{{stu.phone}}' placeholder="phone"
+                required>
+        </div>
+
+        <div class="form-group">
+            <label for="age">age:</label>
+            <input type="number" class="form-control" id="age" name="age" value='{{stu.age}}' placeholder="age"
+                required>
+        </div>
+
+
+        <div class="form-group">
+            <label for="edu_lev">education level:</label>
+            <select name="edu_lev" id="edu_lev" class="form-control">
+                <option value="Preparatory Education (Grade 11-12)"
+                    {% if stu.edu_lev == "Preparatory Education (Grade 11-12)" %} selected {% endif %}>Preparatory
+                    Education
+                    (Grade 11-12)</option>
+                <option value="(TVET) Level III Diploma" {% if stu.edu_lev == "(TVET) Level III Diploma" %} selected
+                    {% endif %}>(TVET) Level III Diploma</option>
+                <option value="Bachelor's Degree" {% if stu.edu_lev == "Bachelor's Degree" %} selected {% endif %}>
+                    Bachelor's Degree</option>
+                <option value="Master's Degree" {% if stu.edu_lev == "Master's Degree" %} selected {% endif %}>Master's
+                    Degree</option>
+                <option value="Doctoral Degree (Ph.D.)" {% if stu.edu_lev == "Doctoral Degree (Ph.D.)" %} selected
+                    {% endif %}>Doctoral Degree (Ph.D.)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="org">Organization:</label>
+            <input type="text" class="form-control" id="org" name="org" value='{{stu.org}}' placeholder="org" required>
+        </div>
+
+        <div class="form-group">
+            <label for="occ">Occupation:</label>
+            <input type="text" class="form-control" id="occ" name="occ" value='{{stu.occ}}' placeholder="occ" required>
+        </div>
+
+        <div class="form-group">
+            <label for="cource">cource:</label>
+            <select name="cource" id="cource" class="form-control">
+                <option value="Electrical safety" {% if stu.edu_lev == "Electrical safety" %} selected {% endif %}>
+                    Electrical safety</option>
+                <option value="Risk assessment" {% if stu.edu_lev == "Risk assessment" %} selected {% endif %}>Risk
+                    assessment</option>
+                <option value="First Aid" {% if stu.edu_lev == "First Aid" %} selected {% endif %}>First Aid</option>
+                <option value="Working at Heights" {% if stu.edu_lev == "Working at Heights" %} selected {% endif %}>
+                    Working
+                    at Heights</option>
+                <option value="Fire fighting" {% if stu.edu_lev == "Fire fighting" %} selected {% endif %}>Fire fighting
+                </option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+{% endblock content %}

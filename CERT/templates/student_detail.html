@@ -1,0 +1,98 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<style>
+    body {
+        background-color: #e2f1e9;
+        /* Light green background */
+        padding: 20px;
+    }
+
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #d1f0cd;
+        /* Light green form background */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .detail {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #d1f0cd;
+        /* Light green form background */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+        color: #1e7e34;
+        /* Dark green text color */
+    }
+
+    table {
+        width: 100%;
+        margin-bottom: 20px;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        border: 1px solid #6da06d;
+        /* Dark green border */
+        padding: 8px;
+        text-align: left;
+    }
+
+    button {
+        background-color: #1e7e34;
+        /* Dark green button background */
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #155724;
+        /* Darker green on hover */
+    }
+</style>
+
+<div class="detail">
+    <div class="card">
+        {% comment %} <img src="{{link}}" class="card-img-top" alt="Student Image"> {% endcomment %}
+        <div class="card-body">
+            <h5 class="card-title">{{stu.first_name|capfirst}} {{stu.last_name|capfirst}}</h5>
+
+            {% if user.is_authenticated %}
+            <p class="card-text">
+                <i class="fas fa-money-bill-wave"></i> Payment Status: {% if stu.payment_status == "paid" %} paid
+                {% else %} pending {% endif %}
+            </p>
+            {% endif %}
+            <p class="card-text">
+                <i class="fas fa-book"></i> Course: {{stu.cource}}
+            </p>
+            <p class="card-text">
+                <i class="fas fa-check-circle {% if stu.finished %} text-success {% else %} text-danger {% endif %}"
+                    title="Certificate is still valid"></i> status:
+                {% if stu.finished %} finished {% else %} not finished {% endif %}
+            </p>
+            <p class="card-text">
+                <i class="fas fa-certificate"></i> Certificate Issue Date: {{stu.cert_rec_date}}
+            </p>
+            <p class="card-text">
+                <i class="fas fa-calendar-times"></i> Certificate Expire Date: {{stu.cert_rec_date}}
+            </p>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

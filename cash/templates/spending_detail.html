@@ -1,0 +1,241 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    /* Custom CSS for a green theme */
+    body {
+        background-color: #e2f1e9;
+        /* Light green background */
+        padding: 20px;
+    }
+
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #d1f0cd;
+        /* Light green form background */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #resultDiv {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #d1f0cd;
+        /* Light green form background */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+        color: #1e7e34;
+        /* Dark green text color */
+    }
+
+    table {
+        width: 100%;
+        margin-bottom: 20px;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        border: 1px solid #6da06d;
+        /* Dark green border */
+        padding: 8px;
+        text-align: left;
+    }
+
+    button {
+        background-color: #1e7e34;
+        /* Dark green button background */
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #155724;
+        /* Darker green on hover */
+    }
+
+    .balance {
+        font-size: 18px;
+        margin-bottom: 10px;
+        padding: 5px 10px;
+        background-color: #f3f3f3;
+        border-left: 5px solid #17a2b8;
+        /* You can change the color to fit your design */
+        display: inline-block;
+    }
+
+    /* Style for the Font Awesome icon */
+    .balance i {
+        margin-right: 5px;
+    }
+
+    .money-box {
+        background-color: #f0f0f0;
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+
+    .money-icon {
+        color: #007bff;
+    }
+
+    h2 {
+        color: #007bff;
+        margin-top: 10px;
+        font-size: 36px;
+    }
+
+    p {
+        color: #555;
+        margin-top: 5px;
+        font-size: 18px;
+    }
+</style>
+<div class="container">
+
+    <form class="border p-5 " action="" method="post">
+        {% csrf_token %}
+        <h2>Enter Transaction code</h2>
+
+
+        <div class="form-group mt-3">
+            <label for="Trans">Transaction code</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="Trans" name="Trance">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary"> <i class="fa fa-search"></i> Search </button>
+    </form>
+
+
+    {% if err %}
+    <h1 class="alart alart-danger">You enterd wrong code! try again</h1>
+    {% endif %}
+
+
+
+    {% if spd %}
+    <div class="money-box mt-5">
+        <i class="fas fa-money-bill-wave fa-3x money-icon"></i>
+        <h2>{{spd.amount}} Birr</h2>
+        <p>Amount Requested</p>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Request Catagory:</h5>
+                    <p class="card-text"> {{spd.spend_catagory}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Request Reason:</h5>
+                    <p class="card-text"> {{spd.reason}} </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Requested Department:</h5>
+                    <p class="card-text"><i class="fas fa-building"></i> {{ spd.departnment_name}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Requested By:</h5>
+                    <p class="card-text"><i class="fas fa-user"></i> {{ spd.submitted_by }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Request Submission Day:</h5>
+                    <p class="card-text"><i class="far fa-calendar-alt"></i> {{ spd.created }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Accepted By:</h5>
+                    <p class="card-text"><i class="fas fa-user"></i> {{ spd.Reviewd_by }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Request Acceptance Day:</h5>
+                    <p class="card-text"><i class="far fa-calendar-alt"></i> {{ spd.A_or_R_day }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">cleared By:</h5>
+                    <p class="card-text"><i class="fas fa-user"></i> {{ spd.Cleared_by }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Clerance Day:</h5>
+                    <p class="card-text"><i class="far fa-calendar-alt"></i> {{ spd.clerance_day }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Total user debt:</h5>
+                    <p class="card-text"><i class="fas fa-money-bill-wave"></i> {{ spd.submitted_by_user.dept }} Birr
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% endif %}
+
+
+
+
+
+</div>
+{% endblock content %}

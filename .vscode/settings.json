@@ -1,0 +1,18 @@
+{
+    "beautify.language": {
+      "html": [
+        "django-html"
+      ]
+    },
+    "[django-html]": {
+      "editor.formatOnSave": true,
+      "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "emmet.includeLanguages": {
+      "django-html": "html"
+  },
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8",
+    "editor.formatOnSave": true
+  }
+  }

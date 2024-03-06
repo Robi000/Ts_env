@@ -36,12 +36,12 @@
         </a>
     </div>
     <div class="col-md-4 my-1">
-        <a href="" class="btn btn-warning btn-block">
+        <a href="{% url 'refund' %}" class="btn btn-warning btn-block">
             <i class="fas fa-money-check"></i> Student Refunding System
         </a>
     </div>
     <div class="col-md-4 my-1">
-        <a href="" class="btn btn-danger btn-block">
+        <a href="{% url 'unpaid' %}" class="btn btn-danger btn-block">
             <i class="fas fa-exclamation-triangle"></i> Unpaid Students
         </a>
     </div>
@@ -52,7 +52,7 @@
 <h5>Student Information:</h5><br>
 <div class="row">
     <div class="col-md-3 my-1">
-        <a href="#" class="btn btn-primary btn-block">
+        <a href="{% url 'stu_detail_search' %}" class="btn btn-primary btn-block">
             <i class="fas fa-user-plus"></i> Student Detail
         </a>
     </div>
@@ -67,7 +67,7 @@
         </a>
     </div>
     <div class="col-md-3 my-1 ">
-        <a href="#" class="btn btn-warning btn-block">
+        <a href="{% url 'student_lag_status' %}" class="btn btn-warning btn-block">
             <i class="fas fa-times"></i> Unfinished Students
         </a>
     </div>
@@ -78,7 +78,7 @@
 <h5>Student Reports:</h5><br>
 <div class="row">
     <div class="col-md-4 my-1">
-        <a href="#" class="btn btn-info btn-block">
+        <a href="{% url 'batch_report' %}" class="btn btn-info btn-block">
             <i class="fas fa-file"></i> Students Report Generator
         </a>
     </div>

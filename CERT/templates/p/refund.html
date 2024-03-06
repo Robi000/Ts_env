@@ -1,0 +1,37 @@
+<div {% if id %} id="resultDiv" hx-swap="outerHTML" {% endif %}>
+    {% if message %}
+    <h2>{{message}}</h2>
+    {% endif %}
+
+    <form action="#" method="post" id="myForm" hx-post="refund_handler/" hx-target="#resultDiv" hx-indicator="true">
+        <div class="htmx-indicator">Loading....</div>
+        {% csrf_token %}
+        <input type="hidden" name="Batc" value="{{Batc}}" />
+        <h2>Payment Record</h2>
+        <table class="table table-striped table-bordered table-sm mt-3">
+            <thead class="thead-light">
+                <tr>
+                    <th>Full name</th>
+                    <th>Cource</th>
+                    <th>Payment Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for stu in stus %}
+                <tr>
+                    <td>{{ stu.first_name|capfirst }} {{ stu.last_name|capfirst }}</td>
+                    <td>{{ stu.cource|capfirst }}</td>
+                    <td>
+                        <select class="form-control" name="{{stu.id}}" id="Batch">
+                            <option value="pending" {% if stu.payment_status == "pending" %}selected{% endif %}>Pending
+                            </option>
+                            <option value="paid" {% if stu.payment_status == "paid" %}selected{% endif %}>Paid</option>
+                        </select>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <button type="submit">Submit</button>
+    </form>
+</div>

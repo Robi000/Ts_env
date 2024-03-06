@@ -1,0 +1,158 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+    /* Custom CSS for a green theme */
+    body {
+        background-color: #e2f1e9;
+        /* Light green background */
+        padding: 20px;
+    }
+
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #d1f0cd;
+        /* Light green form background */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    #resultDiv {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #d1f0cd;
+        /* Light green form background */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+        color: #1e7e34;
+        /* Dark green text color */
+    }
+
+    table {
+        width: 100%;
+        margin-bottom: 20px;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        border: 1px solid #6da06d;
+        /* Dark green border */
+        padding: 8px;
+        text-align: left;
+    }
+
+    button {
+        background-color: #1e7e34;
+        /* Dark green button background */
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #155724;
+        /* Darker green on hover */
+    }
+
+    .balance {
+        font-size: 18px;
+        margin-bottom: 10px;
+        padding: 5px 10px;
+        background-color: #f3f3f3;
+        border-left: 5px solid #17a2b8;
+        /* You can change the color to fit your design */
+        display: inline-block;
+    }
+
+    /* Style for the Font Awesome icon */
+    .balance i {
+        margin-right: 5px;
+    }
+</style>
+
+<div class="container mt-5">
+
+
+
+
+    <form class="mb-3" action="" method="POST">
+
+        <h3 class="mb-3">Spending request Form</h3>
+        <h4 class="balance mb-5"><i class="fas fa-coins"></i> Total spending requests: {{tot}} </h4>
+
+
+
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label for="catagory">Catagory</label>
+            <select name="catagory" class="form-control" id="catagory" required>
+                <option value="Stationery and Office Supplies">Stationery and Office Supplies</option>
+                <option value="Payroll">Payroll</option>
+                <option value="Transportation">Transportation</option>
+                <option value="Utilities">Utilities</option>
+                <option value="Rent and Leasing">Rent and Leasing</option>
+                <option value="Equipment Purchase">Equipment Purchase</option>
+                <option value="Travel Expenses">Travel Expenses</option>
+                <option value="Marketing and Advertising">Marketing and Advertising</option>
+                <option value="Training and Development">Training and Development</option>
+                <option value="Maintenance and Repairs">Maintenance and Repairs</option>
+                <option value="Consulting Services">Consulting Services</option>
+                <option value="Legal Fees">Legal Fees</option>
+                <option value="Research and Development">Research and Development</option>
+                <option value="Charitable Contributions">Charitable Contributions</option>
+                <option value="Employee Benefits">Employee Benefits</option>
+                <option value="Office Maintenance">Office Maintenance</option>
+                <option value="Other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="Reason">Reason</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                </div>
+                <textarea class="form-control" id="Reason" name="reason" placeholder="Enter reason" rows="4"
+                    required></textarea>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="amount">Amount</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                </div>
+                <input type="number" min="0" class="form-control" id="amount" name="amount" placeholder="Enter amount"
+                    required>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="department">Department</label>
+            <select name="department" class="form-control" id="department" required>
+                {% for dp in deps %}
+                <option value="{{dp.id}}">{{dp.name}}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+
+
+        <button type="submit" class="mt-3">Request</button>
+
+    </form>
+
+</div>
+
+{% endblock content %}

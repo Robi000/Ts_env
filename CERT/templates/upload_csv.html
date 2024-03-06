@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+
+
+
+<!-- your_template.html -->
+<style>
+    /* Custom CSS for a green theme */
+    body {
+        background-color: #e2f1e9;
+        /* Light green background */
+        padding: 20px;
+    }
+
+    form {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #d1f0cd;
+        /* Light green form background */
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+        text-align: center;
+        color: #1e7e34;
+        /* Dark green text color */
+    }
+
+    table {
+        width: 100%;
+        margin-bottom: 20px;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        border: 1px solid #6da06d;
+        /* Dark green border */
+        padding: 8px;
+        text-align: left;
+    }
+
+    button {
+        background-color: #1e7e34;
+        /* Dark green button background */
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #155724;
+        /* Darker green on hover */
+    }
+</style>
+
+<div id="resultDiv" hx-swap="outerHTML">
+    <form class="mt-3" enctype="multipart/form-data" action="." method="POST" hx-post='.' hx-target="#resultDiv"
+        hx-indicator="true">
+        <h3>STUDENT REGISTRATION</h3>
+        {% csrf_token %}
+
+        <input type="file" Class="form-control mt-5" name="csvfile" accept=".csv" required>
+        <code>Use CSV file only</code>
+        <br>
+        <button class="mt-4" type="submit">Submit</button>
+    </form>
+</div>
+
+{% endblock content %}

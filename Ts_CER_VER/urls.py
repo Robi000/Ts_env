@@ -9,6 +9,7 @@ urlpatterns = [
     path("old/", include("Oneday_old.urls")),
     path("cert/", include("CERT.urls")),
     path("auth/", include("staff.urls")),
+    path("cash/", include("cash.urls")),
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

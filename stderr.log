@@ -1,0 +1,901 @@
+True
+Not Found: /cert/vendor/animate/animate.css
+True
+Not Found: /cert/vendor/animate/animate.css
+<QueryDict: {'38': ['pending'], '39': ['pending'], '40': ['paid'], '41': ['paid'], '42': ['pending'], 'csrfmiddlewaretoken': ['ZL7e6N9LNQNfSKt16PMDJ1VWzaJzQWBe6MB7mswqX88Asrk1cxw7KuA0L5OJ7ROS'], 'Batc': ['4']}>
+4
+4
+<QueryDict: {'38': ['paid'], '39': ['paid'], '42': ['pending'], 'csrfmiddlewaretoken': ['ZpKeYncBCrStZMAEGxtdMoUbSM5UFWTQ6qe7e2zgMJdOztrEMfdHNRzf4Ha4WR6u'], 'Batc': ['4']}>
+4
+Internal Server Error: /cert/payment/
+Traceback (most recent call last):
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samisafe/Ts_CER_VER/CERT/views.py", line 59, in payment_handler
+    amount = CourceAndPrice.objects.get(name=stu.cource)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+CERT.models.CourceAndPrice.DoesNotExist: CourceAndPrice matching query does not exist.
+<QueryDict: {'38': ['paid'], '39': ['paid'], '42': ['pending'], 'csrfmiddlewaretoken': ['ZpKeYncBCrStZMAEGxtdMoUbSM5UFWTQ6qe7e2zgMJdOztrEMfdHNRzf4Ha4WR6u'], 'Batc': ['4']}>
+4
+Internal Server Error: /cert/payment/
+Traceback (most recent call last):
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samisafe/Ts_CER_VER/CERT/views.py", line 59, in payment_handler
+    amount = CourceAndPrice.objects.get(name=stu.cource)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+CERT.models.CourceAndPrice.DoesNotExist: CourceAndPrice matching query does not exist.
+<QueryDict: {'38': ['paid'], '39': ['paid'], '42': ['pending'], 'csrfmiddlewaretoken': ['ZpKeYncBCrStZMAEGxtdMoUbSM5UFWTQ6qe7e2zgMJdOztrEMfdHNRzf4Ha4WR6u'], 'Batc': ['4']}>
+4
+Internal Server Error: /cert/payment/
+Traceback (most recent call last):
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samisafe/Ts_CER_VER/CERT/views.py", line 59, in payment_handler
+    amount = CourceAndPrice.objects.get(name=stu.cource)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+CERT.models.CourceAndPrice.DoesNotExist: CourceAndPrice matching query does not exist.
+<QueryDict: {'38': ['paid'], '39': ['paid'], '42': ['pending'], 'csrfmiddlewaretoken': ['ZpKeYncBCrStZMAEGxtdMoUbSM5UFWTQ6qe7e2zgMJdOztrEMfdHNRzf4Ha4WR6u'], 'Batc': ['4']}>
+4
+Internal Server Error: /cert/payment/
+Traceback (most recent call last):
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samisafe/Ts_CER_VER/CERT/views.py", line 59, in payment_handler
+    amount = CourceAndPrice.objects.get(name=stu.cource)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+CERT.models.CourceAndPrice.DoesNotExist: CourceAndPrice matching query does not exist.
+<QueryDict: {'38': ['paid'], '39': ['paid'], '42': ['pending'], 'csrfmiddlewaretoken': ['ZpKeYncBCrStZMAEGxtdMoUbSM5UFWTQ6qe7e2zgMJdOztrEMfdHNRzf4Ha4WR6u'], 'Batc': ['4']}>
+4
+Internal Server Error: /cert/payment/
+Traceback (most recent call last):
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samisafe/Ts_CER_VER/CERT/views.py", line 59, in payment_handler
+    amount = CourceAndPrice.objects.get(name=stu.cource)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+CERT.models.CourceAndPrice.DoesNotExist: CourceAndPrice matching query does not exist.
+<QueryDict: {'38': ['paid'], '39': ['paid'], '42': ['pending'], 'csrfmiddlewaretoken': ['ZpKeYncBCrStZMAEGxtdMoUbSM5UFWTQ6qe7e2zgMJdOztrEMfdHNRzf4Ha4WR6u'], 'Batc': ['4']}>
+4
+Internal Server Error: /cert/payment/
+Traceback (most recent call last):
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samisafe/Ts_CER_VER/CERT/views.py", line 59, in payment_handler
+    amount = CourceAndPrice.objects.get(name=stu.cource)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+CERT.models.CourceAndPrice.DoesNotExist: CourceAndPrice matching query does not exist.
+True
+<QueryDict: {'csrfmiddlewaretoken': ['ZL7e6N9LNQNfSKt16PMDJ1VWzaJzQWBe6MB7mswqX88Asrk1cxw7KuA0L5OJ7ROS'], 'Batch': ['3']}>
+<QueryDict: {'32': ['paid'], '36': ['pending'], 'csrfmiddlewaretoken': ['M4B9vPhkgnF1yM723uvVI3FZJrukj36ST552LuEZqF0m8tY29cfpJwk3VmzuAYjw'], 'Batc': ['3']}>
+3
+Internal Server Error: /cert/payment/
+Traceback (most recent call last):
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samisafe/Ts_CER_VER/CERT/views.py", line 59, in payment_handler
+    amount = CourceAndPrice.objects.get(name=stu.cource)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+CERT.models.CourceAndPrice.DoesNotExist: CourceAndPrice matching query does not exist.
+<QueryDict: {'32': ['paid'], '36': ['pending'], 'csrfmiddlewaretoken': ['M4B9vPhkgnF1yM723uvVI3FZJrukj36ST552LuEZqF0m8tY29cfpJwk3VmzuAYjw'], 'Batc': ['3']}>
+3
+Internal Server Error: /cert/payment/
+Traceback (most recent call last):
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samisafe/Ts_CER_VER/CERT/views.py", line 59, in payment_handler
+    amount = CourceAndPrice.objects.get(name=stu.cource)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+CERT.models.CourceAndPrice.DoesNotExist: CourceAndPrice matching query does not exist.
+<QueryDict: {'32': ['paid'], '36': ['pending'], 'csrfmiddlewaretoken': ['M4B9vPhkgnF1yM723uvVI3FZJrukj36ST552LuEZqF0m8tY29cfpJwk3VmzuAYjw'], 'Batc': ['3']}>
+3
+Internal Server Error: /cert/payment/
+Traceback (most recent call last):
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samisafe/Ts_CER_VER/CERT/views.py", line 59, in payment_handler
+    amount = CourceAndPrice.objects.get(name=stu.cource)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+CERT.models.CourceAndPrice.DoesNotExist: CourceAndPrice matching query does not exist.
+<QueryDict: {'32': ['paid'], '36': ['pending'], 'csrfmiddlewaretoken': ['M4B9vPhkgnF1yM723uvVI3FZJrukj36ST552LuEZqF0m8tY29cfpJwk3VmzuAYjw'], 'Batc': ['3']}>
+3
+Internal Server Error: /cert/payment/
+Traceback (most recent call last):
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samisafe/Ts_CER_VER/CERT/views.py", line 59, in payment_handler
+    amount = CourceAndPrice.objects.get(name=stu.cource)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+CERT.models.CourceAndPrice.DoesNotExist: CourceAndPrice matching query does not exist.
+True
+<QueryDict: {'csrfmiddlewaretoken': ['ZL7e6N9LNQNfSKt16PMDJ1VWzaJzQWBe6MB7mswqX88Asrk1cxw7KuA0L5OJ7ROS'], 'Batch': ['2']}>
+<QueryDict: {'26': ['pending'], '28': ['paid'], 'csrfmiddlewaretoken': ['5oHwLwAFOGzEvaQmxqxG2WZd4azGdE8vcpbp1bXkYYUZ5RHmD8ha3pEhg5EQuzl9'], 'Batc': ['2']}>
+2
+2
+<QueryDict: {'26': ['paid'], 'csrfmiddlewaretoken': ['MvzI33hHv73a8GdqRXOMmnbO2uoSAisbTw3BjIEmFpovIn4qXFygnQQSept2RdFP'], 'Batc': ['2']}>
+2
+Internal Server Error: /cert/payment/
+Traceback (most recent call last):
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samisafe/Ts_CER_VER/CERT/views.py", line 59, in payment_handler
+    amount = CourceAndPrice.objects.get(name=stu.cource)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+CERT.models.CourceAndPrice.DoesNotExist: CourceAndPrice matching query does not exist.
+<QueryDict: {'26': ['paid'], 'csrfmiddlewaretoken': ['MvzI33hHv73a8GdqRXOMmnbO2uoSAisbTw3BjIEmFpovIn4qXFygnQQSept2RdFP'], 'Batc': ['2']}>
+2
+Internal Server Error: /cert/payment/
+Traceback (most recent call last):
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samisafe/Ts_CER_VER/CERT/views.py", line 59, in payment_handler
+    amount = CourceAndPrice.objects.get(name=stu.cource)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+CERT.models.CourceAndPrice.DoesNotExist: CourceAndPrice matching query does not exist.
+<QueryDict: {'26': ['paid'], 'csrfmiddlewaretoken': ['MvzI33hHv73a8GdqRXOMmnbO2uoSAisbTw3BjIEmFpovIn4qXFygnQQSept2RdFP'], 'Batc': ['2']}>
+2
+Internal Server Error: /cert/payment/
+Traceback (most recent call last):
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samisafe/Ts_CER_VER/CERT/views.py", line 59, in payment_handler
+    amount = CourceAndPrice.objects.get(name=stu.cource)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+CERT.models.CourceAndPrice.DoesNotExist: CourceAndPrice matching query does not exist.
+True
+<QueryDict: {'csrfmiddlewaretoken': ['ZL7e6N9LNQNfSKt16PMDJ1VWzaJzQWBe6MB7mswqX88Asrk1cxw7KuA0L5OJ7ROS'], 'Batch': ['1']}>
+<QueryDict: {'20': ['pending'], '21': ['paid'], '24': ['pending'], 'csrfmiddlewaretoken': ['B7otGwxpkYy3IlzbT2TreuoKcNotSGonI8SmWbU4ugToi2qbZKDVfX3OoItD9BB1'], 'Batc': ['1']}>
+1
+1
+<QueryDict: {'20': ['paid'], '24': ['pending'], 'csrfmiddlewaretoken': ['Q47XXHwpwVsEkl06SPr6vogcuuLc6FILX5BQdmT4GdNZU2R6YxbAwRVgGpQmnAVp'], 'Batc': ['1']}>
+1
+Internal Server Error: /cert/payment/
+Traceback (most recent call last):
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samisafe/Ts_CER_VER/CERT/views.py", line 59, in payment_handler
+    amount = CourceAndPrice.objects.get(name=stu.cource)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+CERT.models.CourceAndPrice.DoesNotExist: CourceAndPrice matching query does not exist.
+<QueryDict: {'20': ['paid'], '24': ['paid'], 'csrfmiddlewaretoken': ['Q47XXHwpwVsEkl06SPr6vogcuuLc6FILX5BQdmT4GdNZU2R6YxbAwRVgGpQmnAVp'], 'Batc': ['1']}>
+1
+Internal Server Error: /cert/payment/
+Traceback (most recent call last):
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samisafe/Ts_CER_VER/CERT/views.py", line 59, in payment_handler
+    amount = CourceAndPrice.objects.get(name=stu.cource)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+CERT.models.CourceAndPrice.DoesNotExist: CourceAndPrice matching query does not exist.
+<QueryDict: {'20': ['paid'], '24': ['paid'], 'csrfmiddlewaretoken': ['Q47XXHwpwVsEkl06SPr6vogcuuLc6FILX5BQdmT4GdNZU2R6YxbAwRVgGpQmnAVp'], 'Batc': ['1']}>
+1
+Internal Server Error: /cert/payment/
+Traceback (most recent call last):
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samisafe/Ts_CER_VER/CERT/views.py", line 59, in payment_handler
+    amount = CourceAndPrice.objects.get(name=stu.cource)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+CERT.models.CourceAndPrice.DoesNotExist: CourceAndPrice matching query does not exist.
+<QueryDict: {'20': ['paid'], '24': ['paid'], 'csrfmiddlewaretoken': ['Q47XXHwpwVsEkl06SPr6vogcuuLc6FILX5BQdmT4GdNZU2R6YxbAwRVgGpQmnAVp'], 'Batc': ['1']}>
+1
+Internal Server Error: /cert/payment/
+Traceback (most recent call last):
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samisafe/Ts_CER_VER/CERT/views.py", line 59, in payment_handler
+    amount = CourceAndPrice.objects.get(name=stu.cource)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+CERT.models.CourceAndPrice.DoesNotExist: CourceAndPrice matching query does not exist.
+True
+Not Found: /cert/vendor/animate/animate.css
+<QueryDict: {'38': ['pending'], '39': ['paid'], '42': ['pending'], 'csrfmiddlewaretoken': ['ljfOEWg9cViWg10jex0yYqE5IUTNIrEZskJHUBDOmdDhQIRjkfK2ZTj9UPYXZmRD'], 'Batc': ['4']}>
+4
+Fire fighting
+4
+<QueryDict: {'38': ['pending'], '42': ['paid'], 'csrfmiddlewaretoken': ['iq0K0L8KvM9jGw6agUSJDXTsrbrllTZZpruDgqvpF4uEgdXamCCdEqywD6wvCOcD'], 'Batc': ['4']}>
+4
+Risk assessment
+4
+<QueryDict: {'38': ['paid'], 'csrfmiddlewaretoken': ['YxIJeUhUTMburmEofthcZzo15heTqbrT5ycCuzEz34wP13volb1G0235hcj3H6Ex'], 'Batc': ['4']}>
+4
+First Aid
+Internal Server Error: /cert/payment/
+Traceback (most recent call last):
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samisafe/Ts_CER_VER/CERT/views.py", line 60, in payment_handler
+    amount = CourceAndPrice.objects.get(name=stu.cource)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+CERT.models.CourceAndPrice.DoesNotExist: CourceAndPrice matching query does not exist.
+<QueryDict: {'38': ['paid'], 'csrfmiddlewaretoken': ['YxIJeUhUTMburmEofthcZzo15heTqbrT5ycCuzEz34wP13volb1G0235hcj3H6Ex'], 'Batc': ['4']}>
+4
+First Aid
+Internal Server Error: /cert/payment/
+Traceback (most recent call last):
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samisafe/Ts_CER_VER/CERT/views.py", line 60, in payment_handler
+    amount = CourceAndPrice.objects.get(name=stu.cource)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+CERT.models.CourceAndPrice.DoesNotExist: CourceAndPrice matching query does not exist.
+True
+<QueryDict: {'csrfmiddlewaretoken': ['ljfOEWg9cViWg10jex0yYqE5IUTNIrEZskJHUBDOmdDhQIRjkfK2ZTj9UPYXZmRD'], 'Batch': ['3']}>
+<QueryDict: {'32': ['paid'], '36': ['pending'], 'csrfmiddlewaretoken': ['ieQG6NnFhBOYVw13ivYPckL2AKvdUWrPpfkzmsKkrT9jvdS3odIjdNq6MFAnbREt'], 'Batc': ['3']}>
+3
+First Aid
+Internal Server Error: /cert/payment/
+Traceback (most recent call last):
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samisafe/Ts_CER_VER/CERT/views.py", line 60, in payment_handler
+    amount = CourceAndPrice.objects.get(name=stu.cource)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+CERT.models.CourceAndPrice.DoesNotExist: CourceAndPrice matching query does not exist.
+<QueryDict: {'32': ['paid'], '36': ['paid'], 'csrfmiddlewaretoken': ['ieQG6NnFhBOYVw13ivYPckL2AKvdUWrPpfkzmsKkrT9jvdS3odIjdNq6MFAnbREt'], 'Batc': ['3']}>
+3
+First Aid
+Internal Server Error: /cert/payment/
+Traceback (most recent call last):
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/samisafe/Ts_CER_VER/CERT/views.py", line 60, in payment_handler
+    amount = CourceAndPrice.objects.get(name=stu.cource)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "/home/samisafe/virtualenv/Ts_CER_VER/3.9/lib/python3.9/site-packages/django/db/models/query.py", line 637, in get
+    raise self.model.DoesNotExist(
+CERT.models.CourceAndPrice.DoesNotExist: CourceAndPrice matching query does not exist.
+True
+Not Found: /cert/vendor/animate/animate.css
+<QueryDict: {'38': ['paid'], 'csrfmiddlewaretoken': ['3b9PdwYKt2yP4AJDejnn92J2iGeen4SHacDItblpDkTaEhADk17Ravo6uBjoEZ5l'], 'Batc': ['4']}>
+4
+First Aid
+4
+True
+<QueryDict: {'csrfmiddlewaretoken': ['3b9PdwYKt2yP4AJDejnn92J2iGeen4SHacDItblpDkTaEhADk17Ravo6uBjoEZ5l'], 'Batch': ['3']}>
+<QueryDict: {'32': ['paid'], '36': ['pending'], 'csrfmiddlewaretoken': ['gYZn410R79LcqvzLaGX7obtE8jwqee19nZtgkGnwhr6x0cqLgoHBpE8IkeBAv9eN'], 'Batc': ['3']}>
+3
+First Aid
+3
+<QueryDict: {'36': ['paid'], 'csrfmiddlewaretoken': ['XspSpR2nha1Gws14Z5MzNY8MAZZNrZmO4tTLFwp2rsm169S45Nw3OrNQMU4XIUzs'], 'Batc': ['3']}>
+3
+Risk assessment
+3
+True
+<QueryDict: {'csrfmiddlewaretoken': ['3b9PdwYKt2yP4AJDejnn92J2iGeen4SHacDItblpDkTaEhADk17Ravo6uBjoEZ5l'], 'Batch': ['2']}>
+<QueryDict: {'26': ['paid'], 'csrfmiddlewaretoken': ['2YBrA4N4fNnE29a1s4iIyg5FJkr41IWP9Z5kQJaJp5IZCQ11yM2czJKJVfweiD9t'], 'Batc': ['2']}>
+2
+First Aid
+2
+Not Found: /auth/vendor/animate/animate.css
+Not Found: /cert/Batch_report/vendor/animate/animate.css
+Not Found: /auth/vendor/animate/animate.css
+Not Found: /cert/complition/vendor/animate/animate.css
+4
+Not Found: /auth/vendor/animate/animate.css
+Not Found: /cert/report/vendor/animate/animate.css
+Not Found: /cert/Batch_report/vendor/animate/animate.css
+37BB3Robel
+https://drive.google.com/uc?export=view&id=1jhoVZfSW4qhOth8-rX7EY2jPaiGROZ6H
+Image downloaded successfully: CERT/img/37BB3Robel.jpeg
+downloded
+writtem
+38BB3Robel
+https://drive.google.com/uc?export=view&id=1jhoVZfSW4qhOth8-rX7EY2jPaiGROZ6H
+Image downloaded successfully: CERT/img/38BB3Robel.jpeg
+downloded
+writtem
+39BB3Robel
+https://drive.google.com/uc?export=view&id=1jhoVZfSW4qhOth8-rX7EY2jPaiGROZ6H
+Image downloaded successfully: CERT/img/39BB3Robel.jpeg
+downloded
+writtem
+40BB3xxxx
+https://drive.google.com/uc?export=view&id=1bzrxDF9FRNrbXl8ShpC-BYOf2bF0ccfs
+Image downloaded successfully: CERT/img/40BB3xxxx.jpeg
+downloded
+writtem
+41BB3a
+https://drive.google.com/uc?export=view&id=15a7wlbKIV7RGo1uAt9WtWvm_WklX0WHQ
+Image downloaded successfully: CERT/img/41BB3a.jpeg
+downloded
+writtem
+42BB3a
+https://drive.google.com/uc?export=view&id=15a7wlbKIV7RGo1uAt9WtWvm_WklX0WHQ
+Image downloaded successfully: CERT/img/42BB3a.jpeg
+downloded
+writtem
+Not Found: /auth/vendor/animate/animate.css
+Not Found: /auth/login/vendor/animate/animate.css
+Not Found: /auth/vendor/animate/animate.css
+Registeral
+Not Found: /cert/Register/vendor/animate/animate.css
+Registeral
+            Timestamp  ...   Org
+0  11/7/2023 18:41:51  ...  WALE
+1  11/7/2023 18:41:51  ...  WALE
+2  11/7/2023 18:41:51  ...  WALE
+3  11/7/2023 18:46:40  ...  xxxx
+4  11/7/2023 20:01:15  ...     s
+5  11/7/2023 20:01:15  ...     s
+
+[6 rows x 14 columns]
+BB3Robel registerd 
+BB3Robel registerd 
+BB3Robel registerd 
+BB3xxxx registerd 
+BB3a registerd 
+BB3a registerd 
+Not Found: /auth/vendor/animate/animate.css
+Not Found: /auth/login/vendor/animate/animate.css
+Not Found: /auth/vendor/animate/animate.css
+Not Found: /auth/login/vendor/animate/animate.css
+Not Found: /auth/vendor/animate/animate.css
+Not Found: /auth/vendor/animate/animate.css
+Not Found: /robots.txt
+Not Found: /robots.txt
+Not Found: /sitemap.xml
+Not Found: /
+Not Found: /wp-cron.php
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /auth/login/vendor/animate/animate.css
+Not Found: /auth/login/images/icons/favicon.ico
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /wp-includes/wlwmanifest.xml
+Not Found: /xmlrpc.php
+Not Found: /
+Not Found: /blog/wp-includes/wlwmanifest.xml
+Not Found: /web/wp-includes/wlwmanifest.xml
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+Not Found: /website/wp-includes/wlwmanifest.xml
+Not Found: /wp/wp-includes/wlwmanifest.xml
+Not Found: /news/wp-includes/wlwmanifest.xml
+Not Found: /2020/wp-includes/wlwmanifest.xml
+Not Found: /2019/wp-includes/wlwmanifest.xml
+Not Found: /shop/wp-includes/wlwmanifest.xml
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+Not Found: /test/wp-includes/wlwmanifest.xml
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+Not Found: /site/wp-includes/wlwmanifest.xml
+Not Found: /cms/wp-includes/wlwmanifest.xml
+Not Found: /sito/wp-includes/wlwmanifest.xml
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /
+Not Found: /robots.txt
+Not Found: /humans.txt
+Not Found: /ads.txt
+Not Found: /
+Not Found: /.env
+Not Found: /api/.env
+Not Found: /laravel/.env
+Not Found: /
+Not Found: /
+Not Found: /robots.txt
+Not Found: /
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /sitemap.xml
+Not Found: /robots.txt
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /robots.txt
+Not Found: /sitemap.xml
+Not Found: /auth/vendor/animate/animate.css
+Not Found: /auth/images/icons/favicon.ico
+Not Found: /auth/login/vendor/animate/animate.css
+Not Found: /auth/login/images/icons/favicon.ico
+Not Found: /favicon.ico
+Not Found: /auth/vendor/animate/animate.css
+Not Found: /auth/login/vendor/animate/animate.css
+Not Found: /auth/vendor/animate/animate.css
+Not Found: /auth/login/vendor/animate/animate.css
+Not Found: /auth/vendor/animate/animate.css
+Not Found: /auth/vendor/animate/animate.css
+Not Found: /cert/uncomplition/vendor/animate/animate.css
+Not Found: /cert/uncomplition/images/icons/favicon.ico
+<QueryDict: {'csrfmiddlewaretoken': ['4siegmRqqMSh3XZZaAsLydNKr4N33HU4UO6yWpvlQS5x4s0rPZvJ62vmKkmakO5w'], 'Batch': ['4']}>
+<QueryDict: {'csrfmiddlewaretoken': ['4siegmRqqMSh3XZZaAsLydNKr4N33HU4UO6yWpvlQS5x4s0rPZvJ62vmKkmakO5w'], 'Batch': ['4']}>
+<QueryDict: {'csrfmiddlewaretoken': ['4siegmRqqMSh3XZZaAsLydNKr4N33HU4UO6yWpvlQS5x4s0rPZvJ62vmKkmakO5w'], 'Batch': ['3']}>
+<QueryDict: {'csrfmiddlewaretoken': ['4siegmRqqMSh3XZZaAsLydNKr4N33HU4UO6yWpvlQS5x4s0rPZvJ62vmKkmakO5w'], 'Batch': ['2']}>
+<QueryDict: {'csrfmiddlewaretoken': ['4siegmRqqMSh3XZZaAsLydNKr4N33HU4UO6yWpvlQS5x4s0rPZvJ62vmKkmakO5w'], 'Batch': ['1']}>
+Not Found: /auth/vendor/animate/animate.css
+Not Found: /auth/vendor/animate/animate.css
+Not Found: /auth/login/vendor/animate/animate.css
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /wp-includes/wlwmanifest.xml
+Not Found: /xmlrpc.php
+Not Found: /
+Not Found: /blog/wp-includes/wlwmanifest.xml
+Not Found: /web/wp-includes/wlwmanifest.xml
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+Not Found: /website/wp-includes/wlwmanifest.xml
+Not Found: /wp/wp-includes/wlwmanifest.xml
+Not Found: /news/wp-includes/wlwmanifest.xml
+Not Found: /2020/wp-includes/wlwmanifest.xml
+Not Found: /2019/wp-includes/wlwmanifest.xml
+Not Found: /shop/wp-includes/wlwmanifest.xml
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+Not Found: /test/wp-includes/wlwmanifest.xml
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+Not Found: /site/wp-includes/wlwmanifest.xml
+Not Found: /cms/wp-includes/wlwmanifest.xml
+Not Found: /sito/wp-includes/wlwmanifest.xml
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /auth/vendor/animate/animate.css
+Not Found: /auth/images/icons/favicon.ico
+Not Found: /cert/detail/vendor/animate/animate.css
+Not Found: /cert/detail/images/icons/favicon.ico
+Not Found: /cert/detail/vendor/animate/animate.css
+Not Found: /auth/vendor/animate/animate.css
+Not Found: /cert/detail/vendor/animate/animate.css
+Not Found: /cert/detail/vendor/animate/animate.css
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /robots.txt
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /auth/login/vendor/animate/animate.css
+Not Found: /auth/login/images/icons/favicon.ico
+Not Found: /auth/vendor/animate/animate.css
+Not Found: /auth/images/icons/favicon.ico
+Not Found: /cert/detail/vendor/animate/animate.css
+Not Found: /cert/detail/images/icons/favicon.ico
+Not Found: /cert/complition/vendor/animate/animate.css
+Not Found: /cert/complition/images/icons/favicon.ico
+<QueryDict: {'csrfmiddlewaretoken': ['YfgscpxuKqfmEr6vqxdmOCdwqngWMsANXuDdaRDlmznAX79FUjP4EVfGGsZv4ba4'], 'Batch': ['1']}>
+Not Found: /cert/uncomplition/vendor/animate/animate.css
+Not Found: /cert/uncomplition/images/icons/favicon.ico
+Not Found: /robots.txt
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /a9bc224bd710f56d27affffddc764239b58c3faa0/shield.png
+Not Found: /TxGcqRcPIZ
+Not Found: /
+Not Found: /xoWHXpbxAhU
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /robots.txt
+Not Found: /humans.txt
+Not Found: /ads.txt
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /favicon.ico
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /robots.txt
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /wp-includes/wlwmanifest.xml
+Not Found: /xmlrpc.php
+Not Found: /
+Not Found: /blog/wp-includes/wlwmanifest.xml
+Not Found: /web/wp-includes/wlwmanifest.xml
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+Not Found: /website/wp-includes/wlwmanifest.xml
+Not Found: /wp/wp-includes/wlwmanifest.xml
+Not Found: /news/wp-includes/wlwmanifest.xml
+Not Found: /2020/wp-includes/wlwmanifest.xml
+Not Found: /2019/wp-includes/wlwmanifest.xml
+Not Found: /shop/wp-includes/wlwmanifest.xml
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+Not Found: /test/wp-includes/wlwmanifest.xml
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+Not Found: /site/wp-includes/wlwmanifest.xml
+Not Found: /cms/wp-includes/wlwmanifest.xml
+Not Found: /sito/wp-includes/wlwmanifest.xml
+Not Found: /
+Not Found: /robots.txt
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /robots.txt
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /auth/login/vendor/animate/animate.css
+Not Found: /auth/login/images/icons/favicon.ico
+Not Found: /AUTH
+Not Found: /favicon.ico
+Not Found: /auth/vendor/animate/animate.css
+Not Found: /auth/images/icons/favicon.ico
+Not Found: /auth/vendor/animate/animate.css
+Not Found: /auth/login/vendor/animate/animate.css
+Not Found: /auth/login/images/icons/favicon.ico
+Not Found: /auth/vendor/animate/animate.css
+Registeral
+Not Found: /cert/Register/vendor/animate/animate.css
+Not Found: /cert/Register/images/icons/favicon.ico
+Not Found: /cert/edit/vendor/animate/animate.css
+Not Found: /cert/edit/images/icons/favicon.ico
+Not Found: /cert/edit/vendor/animate/animate.css
+Not Found: /auth/vendor/animate/animate.css
+True
+Not Found: /cert/vendor/animate/animate.css
+Not Found: /cert/images/icons/favicon.ico
+True
+<QueryDict: {'csrfmiddlewaretoken': ['Azgs6SzZlGITkhjEI2QKZTjsUNfrxOLYsCdNEZUTFMqibjWyuHO1A2NXrtDPBTC0'], 'Batch': ['5']}>
+True
+<QueryDict: {'csrfmiddlewaretoken': ['Azgs6SzZlGITkhjEI2QKZTjsUNfrxOLYsCdNEZUTFMqibjWyuHO1A2NXrtDPBTC0'], 'Batch': ['4']}>
+True
+<QueryDict: {'csrfmiddlewaretoken': ['Azgs6SzZlGITkhjEI2QKZTjsUNfrxOLYsCdNEZUTFMqibjWyuHO1A2NXrtDPBTC0'], 'Batch': ['2']}>
+True
+<QueryDict: {'csrfmiddlewaretoken': ['Azgs6SzZlGITkhjEI2QKZTjsUNfrxOLYsCdNEZUTFMqibjWyuHO1A2NXrtDPBTC0'], 'Batch': ['2']}>
+True
+<QueryDict: {'csrfmiddlewaretoken': ['Azgs6SzZlGITkhjEI2QKZTjsUNfrxOLYsCdNEZUTFMqibjWyuHO1A2NXrtDPBTC0'], 'Batch': ['5']}>
+<QueryDict: {'43': ['pending'], '44': ['pending'], '45': ['pending'], '46': ['paid'], '47': ['paid'], '48': ['pending'], 'csrfmiddlewaretoken': ['EgoVPSPOYNSetMnRAei7Til0M89sYy8LwjlgnZaIiTADkO0LmTgourPvjOxQ2DZN'], 'Batc': ['5']}>
+5
+Electrical safety
+Electrical safety
+5
+<QueryDict: {'43': ['pending'], '44': ['pending'], '45': ['pending'], '48': ['paid'], 'csrfmiddlewaretoken': ['qGIiZdXMYUklN6oLvQ6tuLj9GVA4Ocg5iJFDxkiGi02KE81Fhv4K5UNEdBYsSh77'], 'Batc': ['5']}>
+5
+Risk assessment
+5
+Not Found: /cert/unpaid/vendor/animate/animate.css
+Not Found: /cert/unpaid/images/icons/favicon.ico
+True
+Not Found: /cert/vendor/animate/animate.css
+True
+<QueryDict: {'csrfmiddlewaretoken': ['ZDsmEdlssq9GEyPSnrXQcAsLqj0h49XvRGpHckGmMwR5vAsM96V7NJWgXZoF8eOx'], 'Batch': ['5']}>
+True
+<QueryDict: {'csrfmiddlewaretoken': ['ZDsmEdlssq9GEyPSnrXQcAsLqj0h49XvRGpHckGmMwR5vAsM96V7NJWgXZoF8eOx'], 'Batch': ['5']}>
+<QueryDict: {'43': ['pending'], '44': ['pending'], '45': ['pending'], 'csrfmiddlewaretoken': ['8sj01Qutc1bTDItIUw3YQCVFd4o2TTN70vglzXPnw7TiuK6CGb1frLpaKKMqXYE9'], 'Batc': ['5']}>
+5
+5
+Not Found: /cert/unpaid/vendor/animate/animate.css
+<QueryDict: {'csrfmiddlewaretoken': ['kSv33eOz7cgdTLXtNRokaLSPpMzZEbTFcVsoBl9triYCKNAnzwmBLUmkWsXnIgKH'], 'Batch': ['5']}>
+<QueryDict: {'csrfmiddlewaretoken': ['kSv33eOz7cgdTLXtNRokaLSPpMzZEbTFcVsoBl9triYCKNAnzwmBLUmkWsXnIgKH'], 'Batch': ['4']}>
+<QueryDict: {'csrfmiddlewaretoken': ['kSv33eOz7cgdTLXtNRokaLSPpMzZEbTFcVsoBl9triYCKNAnzwmBLUmkWsXnIgKH'], 'Batch': ['3']}>
+<QueryDict: {'csrfmiddlewaretoken': ['kSv33eOz7cgdTLXtNRokaLSPpMzZEbTFcVsoBl9triYCKNAnzwmBLUmkWsXnIgKH'], 'Batch': ['3']}>
+<QueryDict: {'csrfmiddlewaretoken': ['kSv33eOz7cgdTLXtNRokaLSPpMzZEbTFcVsoBl9triYCKNAnzwmBLUmkWsXnIgKH'], 'Batch': ['2']}>
+<QueryDict: {'csrfmiddlewaretoken': ['kSv33eOz7cgdTLXtNRokaLSPpMzZEbTFcVsoBl9triYCKNAnzwmBLUmkWsXnIgKH'], 'Batch': ['1']}>
+20
+changed
+24
+Not Found: /auth/vendor/animate/animate.css
+True
+Not Found: /cert/vendor/animate/animate.css
+True
+<QueryDict: {'csrfmiddlewaretoken': ['zREVnY1FPfNlntGUerm9x3OiP99noBYVrUBgV5mz9lvKevjO06kq8ciNmPxLsGPX'], 'Batch': ['1']}>
+True
+Not Found: /cert/vendor/animate/animate.css
+Not Found: /cert/detail/vendor/animate/animate.css
+Not Found: /cert/detail/images/icons/favicon.ico
+Not Found: /auth/vendor/animate/animate.css
+Not Found: /auth/images/icons/favicon.ico
+[UID:2047][1525722] Child process with pid: 1525890 was killed by signal: 15, core dumped: no
+True
+True
+Not Found: /cert/vendor/animate/animate.css
+Not Found: /cert/images/icons/favicon.ico
+Not Found: /
+Not Found: /
+Not Found: /wp-includes/wlwmanifest.xml
+Not Found: /xmlrpc.php
+Not Found: /
+Not Found: /blog/wp-includes/wlwmanifest.xml
+Not Found: /web/wp-includes/wlwmanifest.xml
+Not Found: /wordpress/wp-includes/wlwmanifest.xml
+Not Found: /website/wp-includes/wlwmanifest.xml
+Not Found: /wp/wp-includes/wlwmanifest.xml
+Not Found: /news/wp-includes/wlwmanifest.xml
+Not Found: /2020/wp-includes/wlwmanifest.xml
+Not Found: /2019/wp-includes/wlwmanifest.xml
+Not Found: /shop/wp-includes/wlwmanifest.xml
+Not Found: /wp1/wp-includes/wlwmanifest.xml
+Not Found: /test/wp-includes/wlwmanifest.xml
+Not Found: /wp2/wp-includes/wlwmanifest.xml
+Not Found: /site/wp-includes/wlwmanifest.xml
+Not Found: /cms/wp-includes/wlwmanifest.xml
+Not Found: /sito/wp-includes/wlwmanifest.xml
+[UID:2047][2488332] Child process with pid: 2488450 was killed by signal: 15, core dumped: no
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /
+Not Found: /

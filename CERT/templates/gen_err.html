@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8 text-center">
+        <i class="fas fa-exclamation-circle text-danger display-4"></i>
+        <h1 class="mt-3">Error</h1>
+        <p class="lead">There was an error while generating the PDF.</p>
+        <p>Please try again later or contact support for assistance.</p>
+        <a href="{% url 'batch_report' %}" class="btn btn-primary mt-3">
+            <i class="fas fa-arrow-left"></i> Go Back
+        </a>
+    </div>
+</div>
+{% endblock content %}

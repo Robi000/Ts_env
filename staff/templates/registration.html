@@ -79,21 +79,26 @@
                     <div class="form-group">
                         <label for="email">Email:</label>
 
-                        <input type="text" class="form-control" id="email" name="email" placeholder="Username" required>
+                        <input type="email" autocomplete="off" class="form-control" id="email" name="email"
+                            placeholder="Username" required>
                     </div>
                     <div class="form-group">
                         <label for="phone">Phone:</label>
 
-                        <input type="text" class="form-control" id="phone" name="phone" placeholder="Username" required>
+                        <input type="text" autocomplete="off" class="form-control" id="phone" name="phone"
+                            placeholder="Username" required>
                     </div>
                     <div class="form-group">
                         <label for="role">Role:</label>
 
                         <select name="role" id="role" class="form-control" required>
-                            <option value="Admin">Admin</option>
+
+                            <option value="Sub-Admin">sub-Admin</option>
                             <option value="Finance">Finance
                             </option>
                             <option value="Teacher">Teacher
+                            </option>
+                            <option value="Registeral">Registeral
                             </option>
                         </select>
 
@@ -101,7 +106,7 @@
                     <div class="form-group">
                         <label for="id_password">Password:</label>
 
-                        <input type="password" class="form-control" id="id_password" name="password"
+                        <input type="password" autocomplete="off" class="form-control" id="id_password" name="password"
                             placeholder="Password" required>
                     </div>
 
