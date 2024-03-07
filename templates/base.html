@@ -95,6 +95,13 @@
         {% if user.is_authenticated %}
         <div class="shiftx"> Hello 👋 {{user.users.first_name}}</div>
         {% endif %}
+        {% if Admin %}
+        <li class="nav-item ">
+            <a href="{% url 'dept_list' %}" class="btn btn-light">
+                <i class="fas fa-home"></i> Department
+            </a>
+        </li>
+        {% endif %}
 
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
@@ -118,7 +125,7 @@
 
 
                 {% if Finance or Admin %}
-                <a class="dropdown-item" href="#"> Spending Detail View</a>
+                <a class="dropdown-item" href="{% url 'spd_det' %}"> Spending Detail View</a>
                 <a class="dropdown-item" href="{% url 'f_report' %}">Financial report</a>
                 <a class="dropdown-item" href="{% url 'finance_clearance' %}">Financial clerance</a>
                 {% endif %}
@@ -132,8 +139,12 @@
                 <div class="dropdown-divider"></div>
             </div>
             {% endif %}
+
+
+
         </li>
-        <div class="header">Student Certification Verification Site</div>
+
+        <div class="header px-3">Sami Safety</div>
     </div>
     <div class="container-fluid mt-3">
 

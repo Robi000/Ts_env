@@ -1,0 +1,170 @@
+<div id="resultDiv" hx-swap="outerHTML">
+
+    {% if spd %}
+
+
+
+    <div class="money-box">
+        <i class="fas fa-money-bill-wave fa-3x money-icon"></i>
+        <h2>{{spd.amount}} Birr</h2>
+        <p>Amount Requested</p>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Request Catagory:</h5>
+                    <p class="card-text"> {{spd.spend_catagory}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Request Reason:</h5>
+                    <p class="card-text"> {{spd.reason}} </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Requested Department:</h5>
+                    <p class="card-text"><i class="fas fa-building"></i> {{ spd.departnment_name}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Requested By:</h5>
+                    <p class="card-text"><i class="fas fa-user"></i> {{ spd.submitted_by }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Request Submission Day:</h5>
+                    <p class="card-text"><i class="far fa-calendar-alt"></i> {{ spd.created }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Accepted By:</h5>
+                    <p class="card-text"><i class="fas fa-user"></i> {{ spd.Reviewd_by }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Request Acceptance Day:</h5>
+                    <p class="card-text"><i class="far fa-calendar-alt"></i> {{ spd.A_or_R_day }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Cleared By:</h5>
+                    <p class="card-text"><i class="fas fa-user"></i> {{ spd.Cleared_by }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Clerance Day:</h5>
+                    <p class="card-text"><i class="far fa-calendar-alt"></i> {{ spd.clerance_day }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Recipt from :</h5>
+                    <p class="card-text">{{ spd.recpit_from }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Recpit day:</h5>
+                    <p class="card-text"><i class="far fa-calendar-alt"></i> {{ spd.recpit_Date }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">TIN:</h5>
+                    <p class="card-text"><i class="fas fa-user"></i> {{ spd.recpit_TIN_no }}</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Recpit ref-No:</h5>
+                    <p class="card-text"> {{ spd.recpit_ref_NO }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Total user debt:</h5>
+                    <p class="card-text"><i class="fas fa-money-bill-wave"></i> {{ spd.submitted_by_user.dept }} Birr
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% if r_amount %}
+
+
+
+    <div class="money-box">
+        <i class="fas fa-money-bill-wave fa-3x money-icon"></i>
+        <h2>{{spd.amount}} Birr</h2>
+        <p>Amount Requested</p>
+    </div>
+    <div class="money-box">
+        <i class="fas fa-money-bill-wave fa-3x money-icon1"></i>
+        <h2 class="h21">{{spd.recpit_amount}} Birr</h2>
+        <p>Recit amount </p>
+    </div>
+    <div class="money-box">
+        <i class="fas fa-money-bill-wave fa-3x money-icon2"></i>
+        <h2 class="h22">{{r_amount}} Birr</h2>
+        <p>Return amount </p>
+    </div>
+
+    {% endif %}
+
+    {% else %}
+    <h1>No result yet</h1>
+    {% endif %}
+</div>

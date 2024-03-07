@@ -1,3 +1,7 @@
+from .models import Allocation_history
+from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer
+import io
+from django.template.loader import render_to_string
 from xhtml2pdf import pisa
 from reportlab.platypus import SimpleDocTemplate, Spacer, Paragraph, Table, TableStyle, Image
 from django.shortcuts import render, redirect
@@ -326,15 +330,18 @@ def spending_report(request):
         if head != "All":
             clr_list = clr_list.filter(
                 Cleared_by_user=users.objects.get(id=int(head)))
+            head_name = users.objects.get(id=int(head))
+            head_name = head_name.first_name.capitalize(
+            ) + " " + head_name.Last_name.capitalize()
         if unclered:
             clr_list = clr_list.filter(finance_cleared=False)
         if from_date_str and to_date_str:
             clr_list = clr_list.filter(
                 clerance_day__range=[from_date, to_date])
-        total_gross = sum(log.amount for log in clr_list)
+        total_gross = sum(log.recpit_amount for log in clr_list)
         print(total_gross)
 
-        pdf = generate_pdf(clr_list, total_gross) if head != "All" else generate_pdf(
+        pdf = generate_pdf(clr_list, total_gross, True, head_name) if head != "All" else generate_pdf(
             clr_list, total_gross, False)
         # Create a HTTP response with the PDF
         response = HttpResponse(content_type='application/pdf')
@@ -347,12 +354,40 @@ def spending_report(request):
 
 
 @login_required
-def spending_detail(request, id=None):
-    if id:
-        id = code(id, False)
+def spending_detail(request):
+
+    if request.htmx:
+        print("HELLO WORLD")
+        name = request.POST.get('name', '')
+        if name:
+            id = code(process_string(name[3:]), False)
+            print(id)
+            obj = Spending.objects.filter(id=id)
+            if obj.exists():
+                spd = obj[0]
+                r_amount = spd.recpit_amount
+                context = {"spd": spd}
+                if r_amount != spd.amount:
+                    return_amount = spd.amount - r_amount
+                    context["r_amount"] = return_amount
+                return render(request, 'p/spending_detail.html', context)
+            else:
+                context = {"spd": None}
+                return render(request, 'p/spending_detail.html', context)
+        else:
+            context = {"spd": None}
+            return render(request, 'p/spending_detail.html', context)
 
     context = {}
     return render(request, 'spending_detail.html', context)
+
+
+def process_string(input_string):
+    # Remove non-alphabetic characters and numbers
+    processed_string = ''.join(char for char in input_string if char.isalpha())
+    # Capitalize the processed string
+    processed_string = processed_string.upper()
+    return processed_string
 
 
 @login_required
@@ -366,6 +401,7 @@ def finance_clearance(request):
     if not (request.user.users.role == 'Admin' or request.user.users.role == 'Finance'):
         return render(request, 'Unautorized.html', {})
     heads_of_departments = users.objects.filter(departnment__isnull=False)
+
     context = {"Huser": heads_of_departments}
 
     return render(request, 'finance_clearance.html', context)
@@ -375,11 +411,20 @@ def finance_clearance(request):
 def head_clear(request, id):
 
     head = users.objects.get(id=id)
+    user = head
+    name = user.first_name + " " + user.Last_name
     context = {"head": head}
     if request.method == "POST":
         if not (request.user.users.role == 'Finance'):
             return render(request, 'Unautorized.html', {})
-        head.dept = 0
+        spends = Spending.objects.filter(
+            Q(Cleared_by=name) & Q(finance_cleared=False))
+        for spend in spends:
+            head.dept -= spend.recpit_amount
+            spend.finance_cleared = True
+            spend.save()
+        if head.dept < 0:
+            head.dept = 0
         head.save()
         return redirect("finance_clearance")
     return render(request, 'head_clear.html', context)
@@ -620,7 +665,7 @@ def emp_spd_form(request, id):
 #         return pdf
 
 
-def generate_pdf(spendings, total_gross, Head=True):
+def generate_pdf(spendings, total_gross, Head=True, head_name=""):
     # Create a BytesIO buffer to store PDF
     buffer = BytesIO()
 
@@ -657,7 +702,7 @@ def generate_pdf(spendings, total_gross, Head=True):
     </head>
     <body>
     <h1>TS ENVIRONMENTAL TECHNOLOGY</h1>
-    <h2>Department Heads Financial Clearance Paper</h2>
+    <h2>Financial Paper</h2>
     <table>
         <tr>
             <th style="width: 15%">Rec_From</th>
@@ -677,7 +722,7 @@ def generate_pdf(spendings, total_gross, Head=True):
         try:
             clr_date = spending.recpit_Date.strftime('%Y-%m-%d')
         except:
-            clr_date = "not cleared"
+            clr_date = "** unavilable **"
         amount = spending.recpit_amount * 0.85
         tax = round(spending.recpit_amount * 0.15, 2)
 
@@ -701,10 +746,10 @@ def generate_pdf(spendings, total_gross, Head=True):
         <p>Total amount to be cleared: {total_gross}</p>
         """
         html += """</br>""" * 3
-        html += """
+        html += f"""
         <p>Department Head (Name and signature)</p>
         <br>
-        <p>_______________________________ </p>
+        <p> {head_name}  ___________________________ </p>
         <p>Finance (Name and signature)</p>
         <br>
         <p>_______________________________ </p>
